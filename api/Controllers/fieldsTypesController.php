@@ -19,21 +19,20 @@ class fieldsTypesController extends Controller
     {
         $response['status_code_header'] = http_response_code(403);
     }
+
+
     /*
      * Fetching fieldsTypes
      * Get Request only
      * */
-    public function get( $field = null ,$value = null )
+    public function get($field = null, $value = null)
     {
         // if field is null select all users
-        if (is_null($field))
-        {
+        if (is_null($field)) {
             $data['fields'] = $this->model->selectAll();
             $result = $data['fields'];
-        }
-        else
-        {
-            $data['fields'] = $this->model->selectBy( $field , $value);
+        } else {
+            $data['fields'] = $this->model->selectBy($field, $value);
             $result = $data['fields'];
         }
 
@@ -43,12 +42,12 @@ class fieldsTypesController extends Controller
         return $response;
     }
 
-    public function update( $id )
+    public function update($id)
     {
         $response['status_code_header'] = http_response_code(403);
     }
 
-    public function delete( $id  )
+    public function delete($id)
     {
         $response['status_code_header'] = http_response_code(403);
     }

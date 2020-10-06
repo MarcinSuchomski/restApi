@@ -1,4 +1,5 @@
 <?php
+
 header('Access-Control-Allow-Origin: *');
 header("Access-Control-Allow-Methods: OPTIONS,GET,POST,PUT,DELETE");
 header("Content-Type: application/json; charset=UTF-8");
@@ -12,7 +13,6 @@ header("HTTP/1.1 200 OK");
 
 define('WEBROOT', str_replace("Webroot/index.php", "", $_SERVER["SCRIPT_NAME"]));
 define('ROOT', str_replace("Webroot/index.php", "", $_SERVER["SCRIPT_FILENAME"]));
-
 
 
 require(ROOT . 'Config/core.php');
